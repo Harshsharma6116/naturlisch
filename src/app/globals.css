@@ -162,13 +162,13 @@
 
   .text-leafy-green {
     background: repeating-radial-gradient(
-      circle at 100% 0%,
+      circle at 0% 50%,
       #7CA98B 0px,
-      #7CA98B 12px,
-      #4A7C59 12px,
-      #4A7C59 24px,
-      #A8C3B1 24px,
-      #A8C3B1 36px
+      #7CA98B 15px,
+      #4A7C59 15px,
+      #4A7C59 30px,
+      #A8C3B1 30px,
+      #A8C3B1 45px
     );
     background-size: 200% 200%;
     color: transparent !important;
