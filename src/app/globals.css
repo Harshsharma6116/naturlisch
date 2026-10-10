@@ -138,17 +138,25 @@
 }
 @layer utilities {
   .text-wavy-brown {
-    background-color: #5C4017;
-    background-image: url("data:image/svg+xml,%3Csvg width='200' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 25 Q 50 75 100 25 T 200 25' fill='none' stroke='%234a3311' stroke-width='15' opacity='0.7'/%3E%3Cpath d='M0 50 Q 50 100 100 50 T 200 50' fill='none' stroke='%237a5621' stroke-width='8' opacity='0.5'/%3E%3Cpath d='M0 75 Q 50 25 100 75 T 200 75' fill='none' stroke='%233a270b' stroke-width='20' opacity='0.6'/%3E%3Cpath d='M0 0 Q 50 50 100 0 T 200 0' fill='none' stroke='%2369491a' stroke-width='12' opacity='0.4'/%3E%3C/svg%3E");
-    background-size: 200px 100px;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: wave-slide 8s linear infinite;
+    background: repeating-radial-gradient(
+      circle at 0% 50%,
+      #5C4017 0px,
+      #5C4017 15px,
+      #7a5621 15px,
+      #7a5621 30px,
+      #4a3311 30px,
+      #4a3311 45px
+    );
+    background-size: 200% 200%;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    animation: wave-slide 12s linear infinite;
   }
 
   @keyframes wave-slide {
-    0% { background-position: 0px 0px; }
-    100% { background-position: -200px 0px; }
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
   }
 }
