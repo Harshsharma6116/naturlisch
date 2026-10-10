@@ -42,44 +42,22 @@ export default function HeroBanner() {
         </motion.div>
       </div>
 
-      {/* Right Content (Animated Product Stage) */}
-      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0] overflow-hidden flex items-center justify-center p-8 lg:p-16">
+      {/* Right Content (Hero Image Full Bleed) */}
+      <div className="flex-1 relative min-h-[50vh] lg:min-h-full overflow-hidden">
         
-        {/* Soft atmospheric background */}
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-tr from-[#F1DDC4] to-[#E8D4C0]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-        />
-
-        <div className="relative w-full h-full flex items-center justify-center">
-          
-          {/* Slow pulsing aura behind the image */}
-          <motion.div 
-            className="absolute w-[80%] max-w-[500px] aspect-square rounded-full bg-white/50 blur-3xl mix-blend-overlay"
-            animate={{ 
-              scale: [1, 1.05, 1],
-              opacity: [0.4, 0.7, 0.4]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        <motion.div
+          className="absolute inset-0 w-full h-full"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <img 
+            src="/images/hero-group.jpg" 
+            alt="Natürlisch Real Beauty Collection" 
+            className="w-full h-full object-cover"
           />
+        </motion.div>
 
-          {/* New Group Image Composition */}
-          <motion.div
-            className="relative z-10 w-full max-w-[600px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5"
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1, y: [-8, 8, -8] }}
-          >
-            <img 
-              src="/images/hero-group.jpg" 
-              alt="Natürlisch Real Beauty Collection" 
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-
-        </div>
       </div>
 
     </section>
