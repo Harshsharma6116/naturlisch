@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const featured = [
-  { id: 1, name: "Espresso Body Scrub", price: 499, img: "/images/assets/asset_5.webp", tag: "Bestseller" },
+  { id: 1, name: "Espresso Body Scrub", price: 499, img: "/images/products/product_5.webp", tag: "Bestseller" },
   { id: 2, name: "Revitalizing Ruby Scrub", price: 1299, img: "/images/assets/asset_6.webp", tag: "New" },
-  { id: 3, name: "Organic Clay Mask", price: 899, img: "/images/assets/asset_7.webp" },
+  { id: 3, name: "Azure Tide Scrub", price: 899, img: "/images/assets/asset_17.webp" },
 ];
 
 export default function FeaturedProducts() {
