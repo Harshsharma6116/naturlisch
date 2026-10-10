@@ -43,7 +43,7 @@ export default function HeroBanner() {
       </div>
 
       {/* Right Content (Animated Product Stage) */}
-      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0] overflow-hidden flex items-center justify-center">
+      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0] overflow-hidden flex items-center justify-center p-8 lg:p-16">
         
         {/* Soft atmospheric background */}
         <motion.div 
@@ -55,45 +55,28 @@ export default function HeroBanner() {
 
         <div className="relative w-full h-full flex items-center justify-center">
           
-          {/* Slow pulsing aura behind the product */}
+          {/* Slow pulsing aura behind the image */}
           <motion.div 
-            className="absolute w-[80%] max-w-[500px] aspect-square rounded-full bg-white/40 blur-3xl mix-blend-overlay"
+            className="absolute w-[80%] max-w-[500px] aspect-square rounded-full bg-white/50 blur-3xl mix-blend-overlay"
             animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.3, 0.6, 0.3]
+              scale: [1, 1.05, 1],
+              opacity: [0.4, 0.7, 0.4]
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          {/* Entire composition floats gently */}
+          {/* New Group Image Composition */}
           <motion.div
-            className="relative z-10"
-            animate={{ y: [-12, 12, -12] }}
+            className="relative z-10 w-full max-w-[600px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5"
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1, y: [-8, 8, -8] }}
           >
-            <div className="relative w-[360px] h-[380px] lg:w-[440px] lg:h-[460px]">
-              
-              {/* The open jar — positioned center-right, larger */}
-              <img 
-                src="/images/products/hero-jar.webp" 
-                alt="Natürlisch Berry Scrub" 
-                className="absolute top-0 right-0 w-[80%] h-[80%] object-contain drop-shadow-2xl"
-              />
-
-              {/* The spinning lid — positioned bottom-left */}
-              <motion.div
-                className="absolute bottom-2 left-0 w-[38%] h-[38%] drop-shadow-xl"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-              >
-                <img 
-                  src="/images/products/hero-lid.webp" 
-                  alt="Natürlisch Mandala Lid" 
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-
-            </div>
+            <img 
+              src="/images/hero-group.jpg" 
+              alt="Natürlisch Real Beauty Collection" 
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
         </div>
