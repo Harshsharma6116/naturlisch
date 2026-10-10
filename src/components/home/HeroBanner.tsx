@@ -74,11 +74,11 @@ export default function HeroBanner() {
               animate={{ y: [-15, 15, -15] }} // Uplifted effect for the whole jar
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              <div className="relative w-full h-full max-w-[300px] max-h-[300px] mix-blend-multiply drop-shadow-2xl">
+              <div className="relative w-full h-full max-w-[300px] max-h-[300px] drop-shadow-2xl">
                 
                 {/* JAR BODY (Bottom 75%) */}
                 <img 
-                  src="/images/products/product_8.webp" 
+                  src="/images/products/product_8_transparent.webp" 
                   alt="Natürlisch Red Scrub Body" 
                   className="absolute inset-0 w-full h-full object-contain"
                   style={{ clipPath: "polygon(0 23%, 100% 23%, 100% 100%, 0 100%)" }}
@@ -94,7 +94,7 @@ export default function HeroBanner() {
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <img 
-                    src="/images/products/product_8.webp" 
+                    src="/images/products/product_8_transparent.webp" 
                     alt="Natürlisch Red Scrub Lid" 
                     className="w-full h-full object-contain"
                     style={{ clipPath: "polygon(0 0, 100% 0, 100% 23%, 0 23%)" }}
