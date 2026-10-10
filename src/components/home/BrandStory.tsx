@@ -42,7 +42,7 @@ export default function BrandStory() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="flex flex-col md:flex-row gap-8 text-left max-w-3xl mx-auto font-sans text-[#F1DDC4]/80 text-lg md:text-xl leading-relaxed"
+          className="flex flex-col md:flex-row gap-8 text-left max-w-3xl mx-auto font-sans text-[#F1DDC4]/80 text-lg md:text-xl leading-relaxed mb-24"
         >
           <p className="flex-1">
             At Natürlisch, we believe in authentic radiance. Our products are formulated with organic symmetry in mind, bringing you an earthy sophistication that doesn't just mask, but deeply nourishes.
@@ -50,6 +50,21 @@ export default function BrandStory() {
           <p className="flex-1">
             Every bottle represents our commitment to warm minimalism—a return to grounded elegance. No harsh chemicals, no artificial noise. Just raw, effective nature.
           </p>
+        </motion.div>
+
+        {/* Beautiful Lifestyle Asset Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="relative w-full max-w-4xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl"
+        >
+          <img 
+            src="/images/assets/asset_2.webp" 
+            alt="Natürlisch Brand Story" 
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
       </div>

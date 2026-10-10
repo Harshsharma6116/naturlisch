@@ -28,10 +28,12 @@ export default function CategoryShowcase() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Link href="/shop?gender=female" className="group block relative w-full aspect-[3/4] bg-secondary rounded-[40px] overflow-hidden mb-8">
-              <div className="absolute inset-0 bg-[#E8D4C0] transition-transform duration-700 group-hover:scale-105 flex items-center justify-center">
-                <span className="font-sans text-primary/30 uppercase tracking-widest text-sm">[Women's Lifestyle Visual]</span>
-              </div>
+            <Link href="/shop?gender=female" className="group block relative w-full aspect-[3/4] bg-[#E8D4C0] rounded-[40px] overflow-hidden mb-8">
+              <img 
+                src="/images/assets/asset_3.webp" 
+                alt="Women's Skincare" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
             <h3 className="font-heading text-4xl text-primary mb-3">Women's Skincare</h3>
@@ -52,9 +54,11 @@ export default function CategoryShowcase() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <Link href="/shop?gender=male" className="group block relative w-full aspect-square bg-[#F2F2F2] rounded-[30px] overflow-hidden mb-8">
-              <div className="absolute inset-0 bg-[#E5E5E5] transition-transform duration-700 group-hover:scale-105 flex items-center justify-center">
-                <span className="font-sans text-primary/30 uppercase tracking-widest text-sm">[Men's Lifestyle Visual]</span>
-              </div>
+              <img 
+                src="/images/assets/asset_4.webp" 
+                alt="Men's Skincare" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
             <h3 className="font-heading text-3xl text-primary mb-3">Men's Skincare</h3>

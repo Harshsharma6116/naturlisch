@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const featured = [
-  { id: 1, name: "Hydrating Face Wash", price: 499, img: "/images/logo-cropped.png", tag: "Bestseller" },
-  { id: 2, name: "Revitalizing Serum", price: 1299, img: "/images/logo-cropped.png", tag: "New" },
-  { id: 3, name: "Organic Clay Mask", price: 899, img: "/images/logo-cropped.png" },
+  { id: 1, name: "Espresso Body Scrub", price: 499, img: "/images/assets/asset_5.webp", tag: "Bestseller" },
+  { id: 2, name: "Revitalizing Ruby Scrub", price: 1299, img: "/images/assets/asset_6.webp", tag: "New" },
+  { id: 3, name: "Organic Clay Mask", price: 899, img: "/images/assets/asset_7.webp" },
 ];
 
 export default function FeaturedProducts() {
@@ -39,22 +39,21 @@ export default function FeaturedProducts() {
               transition={{ delay: i * 0.15, duration: 0.8 }}
               className="group cursor-pointer flex flex-col"
             >
-              <div className="relative aspect-[4/5] bg-background mb-6 flex items-center justify-center overflow-hidden">
+              <div className="relative aspect-[4/5] bg-background mb-6 flex items-center justify-center overflow-hidden rounded-2xl">
                 <Image 
                   src={p.img} 
                   alt={p.name} 
-                  width={200}
-                  height={200}
-                  className="w-1/2 h-auto object-contain opacity-70 group-hover:scale-105 transition-transform duration-700" 
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
                 />
                 
                 {p.tag && (
-                  <span className="absolute top-6 left-6 font-sans text-xs uppercase tracking-widest text-primary">
-                    [{p.tag}]
+                  <span className="absolute top-6 left-6 font-sans text-xs uppercase tracking-widest text-primary bg-background/80 px-3 py-1 rounded-full backdrop-blur-sm z-10">
+                    {p.tag}
                   </span>
                 )}
 
-                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/10 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/10 transition-colors duration-500 z-0" />
               </div>
 
               <div className="flex justify-between items-start">
