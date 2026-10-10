@@ -68,17 +68,40 @@ export default function HeroBanner() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
 
-            {/* Floating Code-Generated Product */}
+            {/* Floating Split Jar Effect */}
             <motion.div
               className="absolute inset-0 flex items-center justify-center p-8 z-10"
-              animate={{ y: [-15, 15, -15] }}
+              animate={{ y: [-15, 15, -15] }} // Uplifted effect for the whole jar
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              <TopDownJar 
-                colorHex="#3b5bf2" 
-                className="w-[80%] h-[80%] max-w-[300px] max-h-[300px]" 
-                lidOffset={{x: -60, y: -20}} 
-              />
+              <div className="relative w-full h-full max-w-[300px] max-h-[300px] mix-blend-multiply drop-shadow-2xl">
+                
+                {/* JAR BODY (Bottom 75%) */}
+                <img 
+                  src="/images/products/product_8.webp" 
+                  alt="Natürlisch Red Scrub Body" 
+                  className="absolute inset-0 w-full h-full object-contain"
+                  style={{ clipPath: "polygon(0 23%, 100% 23%, 100% 100%, 0 100%)" }}
+                />
+
+                {/* ROTATING LID (Top 25%) */}
+                <motion.div
+                  className="absolute inset-0 w-full h-full origin-bottom"
+                  animate={{ 
+                    y: [-5, -25, -5], // Lid lifts off slightly
+                    rotate: [-3, 12, -3] // Lid rotates while lifted
+                  }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <img 
+                    src="/images/products/product_8.webp" 
+                    alt="Natürlisch Red Scrub Lid" 
+                    className="w-full h-full object-contain"
+                    style={{ clipPath: "polygon(0 0, 100% 0, 100% 23%, 0 23%)" }}
+                  />
+                </motion.div>
+                
+              </div>
             </motion.div>
 
         </div>
