@@ -20,9 +20,9 @@ export default function HeroBanner() {
             The Essence of Nature
           </span>
           
-          <h1 className="font-heading text-6xl lg:text-[7rem] leading-[0.85] text-primary mb-8 tracking-tight">
+          <h1 className="font-heading text-6xl lg:text-[7rem] leading-[0.85] text-wavy-brown mb-8 tracking-tight">
             Real <br />
-            <span className="italic text-secondary-foreground/90 font-light ml-8 lg:ml-16">Beauty.</span>
+            <span className="italic text-wavy-brown font-light ml-8 lg:ml-16">Beauty.</span>
           </h1>
           
           <p className="font-sans text-lg text-foreground/80 max-w-md leading-relaxed mb-12">
