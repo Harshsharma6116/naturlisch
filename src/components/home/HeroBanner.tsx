@@ -67,25 +67,18 @@ export default function HeroBanner() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          {/* Elegant minimalist circle marking the product placement */}
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-            className="relative w-[60%] max-w-[350px] aspect-[3/4] rounded-[100px] border border-white/40 flex flex-col items-center justify-center"
-          >
-            {/* Very subtle placeholder text */}
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#3A2A0F]/30 text-center px-8">
-              3D Product Animation<br/>Will Render Here
-            </span>
-            
-            {/* Small decorative dot */}
-            <motion.div 
-              className="w-2 h-2 bg-[#3A2A0F]/20 rounded-full mt-6"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </motion.div>
+            {/* Floating Product Image */}
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center p-8"
+              animate={{ y: [-15, 15, -15] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <img 
+                src="/images/products/hero-product.webp" 
+                alt="Natürlisch Blue Scrub" 
+                className="w-full h-full object-contain drop-shadow-2xl mix-blend-multiply opacity-90"
+              />
+            </motion.div>
 
         </div>
       </div>
