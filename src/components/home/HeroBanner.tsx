@@ -16,8 +16,8 @@ export default function HeroBanner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="font-sans text-sm tracking-[0.3em] text-primary/60 uppercase mb-8 block">
-            The Essence of Nature
+          <span className="font-sans text-base font-bold tracking-[0.3em] text-leafy-green uppercase mb-8 block">
+            Purely Natural Essence
           </span>
           
           <h1 className="font-heading text-6xl lg:text-[7rem] leading-[0.85] text-wavy-brown mb-8 tracking-tight">

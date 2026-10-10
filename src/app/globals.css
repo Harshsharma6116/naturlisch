@@ -159,4 +159,24 @@
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
   }
+
+  .text-leafy-green {
+    background: 
+      radial-gradient(circle at 20% 30%, #7CA98B 0%, transparent 25%),
+      radial-gradient(circle at 70% 60%, #4A7C59 0%, transparent 35%),
+      radial-gradient(circle at 40% 80%, #A8C3B1 0%, transparent 30%),
+      radial-gradient(circle at 80% 20%, #4A7C59 0%, transparent 25%),
+      linear-gradient(135deg, #2c4d36, #7CA98B);
+    background-size: 200% 200%;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    animation: leaf-shimmer 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes leaf-shimmer {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
 }
