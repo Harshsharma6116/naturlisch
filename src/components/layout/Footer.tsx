@@ -11,13 +11,13 @@ export default function Footer() {
         
         {/* Brand Column */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="inline-block bg-[#F1DDC4] p-4 rounded-xl w-fit">
+          <Link href="/" className="inline-block bg-[#F1DDC4] p-6 rounded-xl w-fit">
             <Image 
-              src="/images/logo-clean.png" 
+              src="/images/logo-cropped.png" 
               alt="Natürlisch" 
-              width={150} 
-              height={75} 
-              className="h-10 w-auto object-contain"
+              width={240} 
+              height={60} 
+              className="h-12 w-auto object-contain"
             />
           </Link>
           <p className="font-sans text-sm opacity-90 max-w-xs">

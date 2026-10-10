@@ -27,11 +27,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image 
-            src="/images/logo-clean.png" 
+            src="/images/logo-cropped.png" 
             alt="Natürlisch" 
-            width={120} 
-            height={60} 
-            className="h-12 w-auto object-contain"
+            width={200} 
+            height={50} 
+            className="h-8 md:h-10 w-auto object-contain"
             priority
           />
         </Link>

@@ -39,11 +39,11 @@ export default function BrandStory() {
           <div className="absolute inset-0 bg-secondary rounded-[40px] transform rotate-3 flex items-center justify-center border border-border shadow-2xl">
             <div className="bg-background w-[90%] h-[90%] rounded-[30px] flex items-center justify-center p-8">
               <Image 
-                src="/images/logo-clean.png"
+                src="/images/logo-cropped.png"
                 alt="Natürlisch Brand"
-                width={300}
-                height={150}
-                className="opacity-90"
+                width={400}
+                height={100}
+                className="opacity-90 w-full h-auto max-w-[280px]"
               />
             </div>
           </div>
