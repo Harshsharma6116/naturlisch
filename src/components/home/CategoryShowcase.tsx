@@ -55,7 +55,7 @@ export default function CategoryShowcase() {
           >
             <Link href="/shop?gender=male" className="group block relative w-full aspect-square bg-[#F2F2F2] rounded-[30px] overflow-hidden mb-8">
               <img 
-                src="/images/assets/asset_4.webp" 
+                src="/images/assets/asset_17.webp" 
                 alt="Men's Skincare" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
