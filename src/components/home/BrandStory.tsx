@@ -58,13 +58,14 @@ export default function BrandStory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-4xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl"
+          className="relative w-full max-w-4xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl border border-[#F1DDC4]/10"
         >
           <img 
-            src="/images/assets/asset_2.webp" 
+            src="/images/hero-group.jpg" 
             alt="Natürlisch Brand Story" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-1000 hover:opacity-100 hover:scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#3A2A0F] via-transparent to-transparent opacity-60 pointer-events-none" />
         </motion.div>
 
       </div>
