@@ -69,35 +69,34 @@ export default function HeroBanner() {
           />
 
             {/* Floating Split Jar Effect */}
+            {/* Top-Down Split Jar Effect */}
             <motion.div
-              className="absolute inset-0 flex items-center justify-center p-8 z-10"
-              animate={{ y: [-15, 15, -15] }} // Uplifted effect for the whole jar
+              className="absolute inset-0 flex items-center justify-center p-4 z-10"
+              animate={{ y: [-10, 10, -10] }} // Gentle uplift effect
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              <div className="relative w-full h-full max-w-[300px] max-h-[300px] drop-shadow-2xl">
+              <div className="relative w-full max-w-[450px] aspect-[4/3] mix-blend-multiply drop-shadow-2xl">
                 
-                {/* JAR BODY (Bottom 75%) */}
+                {/* JAR BODY (Right 70%) */}
                 <img 
-                  src="/images/products/product_8_transparent.webp" 
-                  alt="Natürlisch Red Scrub Body" 
+                  src="/images/products/red-topdown.jpg" 
+                  alt="Natürlisch Red Scrub Top" 
                   className="absolute inset-0 w-full h-full object-contain"
-                  style={{ clipPath: "polygon(0 23%, 100% 23%, 100% 100%, 0 100%)" }}
+                  style={{ clipPath: "polygon(28% 0, 100% 0, 100% 100%, 28% 100%)" }}
                 />
 
-                {/* ROTATING LID (Top 25%) */}
+                {/* ROTATING LID (Left 30%) */}
                 <motion.div
-                  className="absolute inset-0 w-full h-full origin-bottom"
-                  animate={{ 
-                    y: [-5, -25, -5], // Lid lifts off slightly
-                    rotate: [-3, 12, -3] // Lid rotates while lifted
-                  }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full"
+                  style={{ transformOrigin: "14% 50%" }} // Approximate center of the lid in the image
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                 >
                   <img 
-                    src="/images/products/product_8_transparent.webp" 
+                    src="/images/products/red-topdown.jpg" 
                     alt="Natürlisch Red Scrub Lid" 
-                    className="w-full h-full object-contain"
-                    style={{ clipPath: "polygon(0 0, 100% 0, 100% 23%, 0 23%)" }}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    style={{ clipPath: "polygon(0 0, 28% 0, 28% 100%, 0 100%)" }}
                   />
                 </motion.div>
                 
