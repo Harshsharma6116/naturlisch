@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ShoppingBag } from 'lucide-react';
 
+export const instant = false;
+
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   
