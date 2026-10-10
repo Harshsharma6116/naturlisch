@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import { TopDownJar } from "@/components/ui/TopDownJar";
 
 export default function HeroBanner() {
   return (
@@ -55,7 +53,7 @@ export default function HeroBanner() {
           transition={{ duration: 2 }}
         />
 
-        {/* The Pedestal / Spotlight for the future animated product */}
+        {/* The Pedestal / Spotlight */}
         <div className="relative w-full h-full flex items-center justify-center">
           
           {/* Slow pulsing aura */}
@@ -68,40 +66,37 @@ export default function HeroBanner() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
 
-            {/* Floating Split Jar Effect */}
-            {/* Top-Down Split Jar Effect */}
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center p-4 z-10"
-              animate={{ y: [-10, 10, -10] }} // Gentle uplift effect
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="relative w-full max-w-[450px] aspect-[4/3] mix-blend-multiply drop-shadow-2xl">
-                
-                {/* JAR BODY (Right 70%) */}
-                <img 
-                  src="/images/products/red-topdown.jpg" 
-                  alt="Natürlisch Red Scrub Top" 
-                  className="absolute inset-0 w-full h-full object-contain"
-                  style={{ clipPath: "polygon(28% 0, 100% 0, 100% 100%, 28% 100%)" }}
-                />
+          {/* Floating Product Composition */}
+          <motion.div
+            className="relative z-10 flex items-center justify-center"
+            animate={{ y: [-12, 12, -12] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            {/* Container for jar + lid composition */}
+            <div className="relative w-[340px] h-[340px] lg:w-[420px] lg:h-[420px]">
+              
+              {/* Open Jar (center, slightly right-up) */}
+              <img 
+                src="/images/products/hero-jar.webp" 
+                alt="Natürlisch Scrub" 
+                className="absolute top-0 right-0 w-[75%] h-[75%] object-contain drop-shadow-2xl"
+              />
 
-                {/* ROTATING LID (Left 30%) */}
-                <motion.div
-                  className="absolute inset-0 w-full h-full"
-                  style={{ transformOrigin: "14% 50%" }} // Approximate center of the lid in the image
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                >
-                  <img 
-                    src="/images/products/red-topdown.jpg" 
-                    alt="Natürlisch Red Scrub Lid" 
-                    className="absolute inset-0 w-full h-full object-contain"
-                    style={{ clipPath: "polygon(0 0, 28% 0, 28% 100%, 0 100%)" }}
-                  />
-                </motion.div>
-                
-              </div>
-            </motion.div>
+              {/* Spinning Lid (bottom-left, like a chakra) */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-[45%] h-[45%]"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+              >
+                <img 
+                  src="/images/products/hero-lid.webp" 
+                  alt="Natürlisch Lid" 
+                  className="w-full h-full object-contain drop-shadow-xl"
+                />
+              </motion.div>
+
+            </div>
+          </motion.div>
 
         </div>
       </div>
