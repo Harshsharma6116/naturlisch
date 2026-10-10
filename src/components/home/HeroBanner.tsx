@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { TopDownJar } from "@/components/ui/TopDownJar";
 
 export default function HeroBanner() {
   return (
@@ -67,16 +68,16 @@ export default function HeroBanner() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
 
-            {/* Floating Product Image */}
+            {/* Floating Code-Generated Product */}
             <motion.div
-              className="absolute inset-0 flex items-center justify-center p-8"
+              className="absolute inset-0 flex items-center justify-center p-8 z-10"
               animate={{ y: [-15, 15, -15] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              <img 
-                src="/images/products/hero-product.webp" 
-                alt="Natürlisch Blue Scrub" 
-                className="w-full h-full object-contain drop-shadow-2xl mix-blend-multiply opacity-90"
+              <TopDownJar 
+                colorHex="#3b5bf2" 
+                className="w-[80%] h-[80%] max-w-[300px] max-h-[300px]" 
+                lidOffset={{x: -60, y: -20}} 
               />
             </motion.div>
 
