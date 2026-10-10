@@ -42,19 +42,19 @@ export default function HeroBanner() {
         </motion.div>
       </div>
 
-      {/* Right Content (Hero Image Full Bleed) */}
-      <div className="flex-1 relative min-h-[50vh] lg:min-h-full overflow-hidden">
+      {/* Right Content (Hero Image Fitted Frame) */}
+      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0]/20 flex items-center justify-center p-8 lg:p-16">
         
         <motion.div
-          className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
+          className="relative w-full max-w-[650px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <img 
             src="/images/hero-group.jpg" 
             alt="Natürlisch Real Beauty Collection" 
-            className="w-full h-full object-cover"
+            className="w-full h-auto block"
           />
         </motion.div>
 
