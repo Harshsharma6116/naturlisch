@@ -13,11 +13,11 @@ export default function Footer() {
         <div className="flex flex-col gap-6">
           <Link href="/" className="inline-block bg-[#F1DDC4] p-4 rounded-xl w-fit">
             <Image 
-              src="/images/logo.png" 
+              src="/images/logo-clean.png" 
               alt="Natürlisch" 
               width={150} 
               height={75} 
-              className="h-10 w-auto object-contain mix-blend-multiply"
+              className="h-10 w-auto object-contain"
             />
           </Link>
           <p className="font-sans text-sm opacity-90 max-w-xs">

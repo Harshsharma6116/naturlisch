@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image 
-            src="/images/logo.png" 
+            src="/images/logo-clean.png" 
             alt="Natürlisch" 
             width={120} 
             height={60} 
