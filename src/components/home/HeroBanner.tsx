@@ -45,7 +45,7 @@ export default function HeroBanner() {
       {/* Right Content (Animated Product Stage) */}
       <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0] overflow-hidden flex items-center justify-center">
         
-        {/* Soft atmospheric background glow */}
+        {/* Soft atmospheric background */}
         <motion.div 
           className="absolute inset-0 bg-gradient-to-tr from-[#F1DDC4] to-[#E8D4C0]"
           initial={{ opacity: 0 }}
@@ -53,10 +53,9 @@ export default function HeroBanner() {
           transition={{ duration: 2 }}
         />
 
-        {/* The Pedestal / Spotlight */}
         <div className="relative w-full h-full flex items-center justify-center">
           
-          {/* Slow pulsing aura */}
+          {/* Slow pulsing aura behind the product */}
           <motion.div 
             className="absolute w-[80%] max-w-[500px] aspect-square rounded-full bg-white/40 blur-3xl mix-blend-overlay"
             animate={{ 
@@ -66,32 +65,31 @@ export default function HeroBanner() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          {/* Floating Product Composition */}
+          {/* Entire composition floats gently */}
           <motion.div
-            className="relative z-10 flex items-center justify-center"
+            className="relative z-10"
             animate={{ y: [-12, 12, -12] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            {/* Container for jar + lid composition */}
-            <div className="relative w-[340px] h-[340px] lg:w-[420px] lg:h-[420px]">
+            <div className="relative w-[360px] h-[380px] lg:w-[440px] lg:h-[460px]">
               
-              {/* Open Jar (center, slightly right-up) */}
+              {/* The open jar — positioned center-right, larger */}
               <img 
                 src="/images/products/hero-jar.webp" 
-                alt="Natürlisch Scrub" 
-                className="absolute top-0 right-0 w-[75%] h-[75%] object-contain drop-shadow-2xl"
+                alt="Natürlisch Berry Scrub" 
+                className="absolute top-0 right-0 w-[80%] h-[80%] object-contain drop-shadow-2xl"
               />
 
-              {/* Spinning Lid (bottom-left, like a chakra) */}
+              {/* The spinning lid — positioned bottom-left */}
               <motion.div
-                className="absolute bottom-0 left-0 w-[45%] h-[45%]"
+                className="absolute bottom-2 left-0 w-[38%] h-[38%] drop-shadow-xl"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
               >
                 <img 
                   src="/images/products/hero-lid.webp" 
-                  alt="Natürlisch Lid" 
-                  className="w-full h-full object-contain drop-shadow-xl"
+                  alt="Natürlisch Mandala Lid" 
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
 
