@@ -43,24 +43,51 @@ export default function HeroBanner() {
         </motion.div>
       </div>
 
-      {/* Right Content (Editorial Image/Video Slot) */}
-      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-secondary overflow-hidden">
+      {/* Right Content (Animated Product Stage) */}
+      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0] overflow-hidden flex items-center justify-center">
+        
+        {/* Soft atmospheric background glow */}
         <motion.div 
-          className="absolute inset-0"
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        >
-          {/* Conceptual Image Placeholder - A soft gradient replacing an actual photo for now */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#F1DDC4] to-[#E3C5A5]" />
+          className="absolute inset-0 bg-gradient-to-tr from-[#F1DDC4] to-[#E8D4C0]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        />
+
+        {/* The Pedestal / Spotlight for the future animated product */}
+        <div className="relative w-full h-full flex items-center justify-center">
           
-          {/* Decorative element representing a product bottle/shape in the editorial shoot */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[70%] bg-[#FFF8F0]/40 backdrop-blur-md rounded-[100px] border border-white/30 shadow-2xl flex items-center justify-center">
-            <span className="font-heading text-primary/50 text-2xl text-center px-8">
-              [Editorial Campaign Image Slot]
+          {/* Slow pulsing aura */}
+          <motion.div 
+            className="absolute w-[80%] max-w-[500px] aspect-square rounded-full bg-white/40 blur-3xl mix-blend-overlay"
+            animate={{ 
+              scale: [1, 1.1, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+
+          {/* Elegant minimalist circle marking the product placement */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+            className="relative w-[60%] max-w-[350px] aspect-[3/4] rounded-[100px] border border-white/40 flex flex-col items-center justify-center"
+          >
+            {/* Very subtle placeholder text */}
+            <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#3A2A0F]/30 text-center px-8">
+              3D Product Animation<br/>Will Render Here
             </span>
-          </div>
-        </motion.div>
+            
+            {/* Small decorative dot */}
+            <motion.div 
+              className="w-2 h-2 bg-[#3A2A0F]/20 rounded-full mt-6"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </motion.div>
+
+        </div>
       </div>
 
     </section>
