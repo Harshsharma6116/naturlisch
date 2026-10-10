@@ -30,7 +30,7 @@ export default function CategoryShowcase() {
           >
             <Link href="/shop?gender=female" className="group block relative w-full aspect-[3/4] bg-[#E8D4C0] rounded-[40px] overflow-hidden mb-8">
               <img 
-                src="/images/assets/asset_3.webp" 
+                src="/images/women_cherry.png" 
                 alt="Women's Skincare" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
