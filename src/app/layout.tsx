@@ -16,6 +16,17 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Natürlisch | Real Beauty",
   description: "Authentic personal care and a genuine approach to aesthetics with natural products.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/manifest.json",
 };
 
 import AnnouncementTicker from "@/components/common/AnnouncementTicker";
