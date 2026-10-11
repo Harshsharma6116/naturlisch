@@ -58,9 +58,9 @@ export default function CategoryShowcase() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <Link href="/shop?gender=male" className="group block relative w-full aspect-square bg-[#F2F2F2] rounded-[30px] overflow-hidden mb-8">
+            <Link href="/shop?gender=male" className="group block relative w-full aspect-[4/5] bg-[#F2F2F2] rounded-[30px] overflow-hidden mb-8">
               <img 
-                src="/images/assets/asset_17.webp" 
+                src="/images/assets/asset_16.webp" 
                 alt="Men's Skincare" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
