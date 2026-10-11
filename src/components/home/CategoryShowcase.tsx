@@ -10,11 +10,11 @@ export default function CategoryShowcase() {
     <section className="py-32 bg-background">
       <div className="container mx-auto px-4 max-w-7xl">
         
-        <div className="mb-16 md:mb-24 text-center md:text-left flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
+        <div className="mb-12 md:mb-16 text-center md:text-left flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <h2 className="font-heading text-5xl md:text-6xl text-primary max-w-2xl leading-tight">
             Curated for <br/> <span className="italic">every skin.</span>
           </h2>
-          <div className="flex flex-col items-center md:items-end gap-6 w-full md:w-auto">
+          <div className="flex flex-col items-center md:items-end gap-4 w-full md:w-auto">
             <SkinConcernStickyNote />
             <p className="font-sans text-sm uppercase tracking-widest text-primary/60">
               01 — The Lookbook
@@ -50,9 +50,9 @@ export default function CategoryShowcase() {
             </Link>
           </motion.div>
 
-          {/* Men's Skincare - Smaller & Staggered down */}
+          {/* Men's Skincare - Staggered down naturally without empty voids */}
           <motion.div 
-            className="md:col-span-5 flex flex-col md:pt-48"
+            className="md:col-span-5 flex flex-col md:pt-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}

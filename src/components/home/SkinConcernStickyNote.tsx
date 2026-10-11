@@ -22,29 +22,36 @@ export default function SkinConcernStickyNote() {
 
   return (
     <div className="flex flex-col items-start md:items-end select-none">
-      <div className="flex items-center gap-2 mb-3">
-        <span className="font-sans text-[11px] tracking-widest uppercase text-primary/70 font-medium">
-          Daily Queries
+      <div className="flex items-center gap-2 mb-2">
+        <span className="font-sans text-[11px] tracking-widest uppercase text-primary/60 font-medium">
+          Skin Queries
         </span>
-        <span className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-mono font-semibold">
-          {index + 1}/4
-        </span>
+        <div className="flex items-center gap-1">
+          {stickyNotes.map((_, i) => (
+            <div
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === index ? "w-3 bg-primary" : "w-1.5 bg-primary/20"
+              }`}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Interactive Sticky Note Stack */}
+      {/* Interactive Sticky Note Stack - Sized cleanly for natural balance */}
       <div 
         onClick={handleNextNote}
-        className="relative w-56 sm:w-64 md:w-72 aspect-square cursor-pointer group"
+        className="relative w-40 sm:w-44 md:w-48 aspect-square cursor-pointer group"
         title="Click to peel next sticky note"
       >
         {/* Subtle Stack Note 2 (Deepest) */}
         <div 
-          className="absolute inset-0 bg-[#E8D4C0] rounded-lg shadow-md transform rotate-3 scale-95 opacity-60 transition-transform duration-300 group-hover:rotate-6"
+          className="absolute inset-0 bg-[#E8D4C0] rounded-lg shadow-sm transform rotate-3 scale-95 opacity-50 transition-transform duration-300 group-hover:rotate-5"
         />
 
         {/* Subtle Stack Note 1 (Directly underneath) */}
         <div 
-          className="absolute inset-0 bg-[#F4E365]/90 rounded-lg shadow-md transform -rotate-2 scale-98 transition-transform duration-300 group-hover:-rotate-4 overflow-hidden"
+          className="absolute inset-0 bg-[#F4E365]/80 rounded-lg shadow-sm transform -rotate-2 scale-98 transition-transform duration-300 group-hover:-rotate-3 overflow-hidden"
         >
           <img 
             src={nextNote.src} 
@@ -57,23 +64,23 @@ export default function SkinConcernStickyNote() {
         <AnimatePresence mode="popLayout">
           <motion.div
             key={currentNote.id}
-            initial={{ opacity: 0.6, scale: 0.95, rotate: -2, y: 10 }}
+            initial={{ opacity: 0.6, scale: 0.95, rotate: -2, y: 8 }}
             animate={{ opacity: 1, scale: 1, rotate: 0, y: 0 }}
             exit={{ 
               opacity: 0, 
-              rotate: 18, 
-              x: 80, 
-              y: -60, 
+              rotate: 16, 
+              x: 60, 
+              y: -40, 
               scale: 0.9,
-              transition: { duration: 0.35, ease: [0.32, 0.72, 0, 1] } 
+              transition: { duration: 0.3, ease: [0.32, 0.72, 0, 1] } 
             }}
-            whileHover={{ scale: 1.03, rotate: 1 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02, rotate: 0.5 }}
+            whileTap={{ scale: 0.96 }}
             transition={{ type: "spring", stiffness: 350, damping: 25 }}
-            className="relative w-full h-full rounded-lg overflow-hidden shadow-[0_16px_30px_-8px_rgba(0,0,0,0.18)] bg-[#F8E764] ring-1 ring-black/5"
+            className="relative w-full h-full rounded-md overflow-hidden shadow-[0_10px_22px_-6px_rgba(0,0,0,0.16)] bg-[#F8E764] ring-1 ring-black/5"
           >
             {/* Realistic Frosted Tape Strip at Top */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-6 bg-white/40 backdrop-blur-md rounded-sm shadow-sm border border-white/30 z-20 pointer-events-none transform -rotate-1" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-4 bg-white/50 backdrop-blur-md rounded-sm shadow-sm border border-white/40 z-20 pointer-events-none transform -rotate-1" />
 
             {/* Note Image */}
             <img 
@@ -83,19 +90,15 @@ export default function SkinConcernStickyNote() {
             />
 
             {/* Corner curl highlight gradient */}
-            <div className="absolute bottom-0 right-0 w-12 h-12 bg-gradient-to-tl from-black/10 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-tl from-black/10 via-transparent to-transparent pointer-events-none" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Tap Helper Hint Pill */}
-        <motion.div 
-          className="absolute -bottom-7 right-2 flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-primary/70 group-hover:text-primary transition-colors pointer-events-none"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
+        {/* Tap Helper Hint */}
+        <div className="absolute -bottom-5 right-1 flex items-center gap-1 font-sans text-[10px] uppercase tracking-wider text-primary/60 group-hover:text-primary transition-colors pointer-events-none">
           <span>Tap to peel</span>
-          <span className="inline-block transition-transform duration-300 group-hover:rotate-45">↺</span>
-        </motion.div>
+          <span className="text-[11px] inline-block transition-transform duration-300 group-hover:rotate-90">↺</span>
+        </div>
       </div>
     </div>
   );
