@@ -3,18 +3,23 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import SkinConcernStickyNote from "./SkinConcernStickyNote";
+
 export default function CategoryShowcase() {
   return (
     <section className="py-32 bg-background">
       <div className="container mx-auto px-4 max-w-7xl">
         
-        <div className="mb-20 md:mb-32 text-center md:text-left flex flex-col md:flex-row justify-between items-end">
+        <div className="mb-16 md:mb-24 text-center md:text-left flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
           <h2 className="font-heading text-5xl md:text-6xl text-primary max-w-2xl leading-tight">
             Curated for <br/> <span className="italic">every skin.</span>
           </h2>
-          <p className="font-sans text-sm uppercase tracking-widest text-primary/60 mt-6 md:mt-0 max-w-xs">
-            01 — The Lookbook
-          </p>
+          <div className="flex flex-col items-center md:items-end gap-6 w-full md:w-auto">
+            <SkinConcernStickyNote />
+            <p className="font-sans text-sm uppercase tracking-widest text-primary/60">
+              01 — The Lookbook
+            </p>
+          </div>
         </div>
 
         {/* Staggered Asymmetrical Grid */}
