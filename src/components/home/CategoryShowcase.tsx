@@ -33,7 +33,7 @@ export default function CategoryShowcase() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Link href="/shop?gender=female" className="group block relative w-full aspect-[3/4] bg-[#E8D4C0] rounded-[40px] overflow-hidden mb-8">
+            <Link href="/shop?gender=female" className="group block relative w-full aspect-[2/3] bg-[#E8D4C0] rounded-[40px] overflow-hidden mb-8">
               <img 
                 src="/images/assets/asset_6.webp" 
                 alt="Women's Skincare" 
