@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "Authentic personal care and a genuine approach to aesthetics with natural products.",
 };
 
+import AnnouncementTicker from "@/components/common/AnnouncementTicker";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${abrilFatface.variable} antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
+        <AnnouncementTicker />
         <Navbar />
         <main className="flex-grow">
           {children}

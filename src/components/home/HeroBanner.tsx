@@ -39,6 +39,18 @@ export default function HeroBanner() {
               <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
+
+          {/* Live Shoots in Motion Micro-Hook */}
+          <div className="mt-8 sm:mt-12 flex items-center gap-3">
+            <div className="flex -space-x-2">
+              <img src="/images/models/model_cherry_shoot.gif" className="w-8 h-8 rounded-full border-2 border-[#FFF8F0] object-cover shadow-sm" alt="Cherry Model Shoot" />
+              <img src="/images/models/model_azure_shoot.gif" className="w-8 h-8 rounded-full border-2 border-[#FFF8F0] object-cover shadow-sm" alt="Azure Model Shoot" />
+              <img src="/images/models/model_espresso_shoot.gif" className="w-8 h-8 rounded-full border-2 border-[#FFF8F0] object-cover shadow-sm" alt="Espresso Model Shoot" />
+            </div>
+            <span className="font-sans text-[11px] uppercase tracking-wider text-primary/70 font-medium">
+              Shoots In Motion • 35mm
+            </span>
+          </div>
         </motion.div>
       </div>
 
@@ -51,6 +63,14 @@ export default function HeroBanner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
+          {/* Live Campaign Pill Badge */}
+          <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/15 text-white shadow-lg pointer-events-none">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90">
+              Campaign 2026
+            </span>
+          </div>
+
           <img 
             src="/images/hero-group.jpg" 
             alt="Natürlisch Real Beauty Collection" 
