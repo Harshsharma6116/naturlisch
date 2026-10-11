@@ -7,16 +7,16 @@ import SkinConcernStickyNote from "./SkinConcernStickyNote";
 
 export default function CategoryShowcase() {
   return (
-    <section className="py-32 bg-background">
+    <section className="py-16 md:py-32 bg-background">
       <div className="container mx-auto px-4 max-w-7xl">
         
-        <div className="mb-12 md:mb-16 text-center md:text-left flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-          <h2 className="font-heading text-5xl md:text-6xl text-primary max-w-2xl leading-tight">
+        <div className="mb-10 md:mb-16 text-center md:text-left flex flex-col md:flex-row justify-between items-center md:items-end gap-6 md:gap-8">
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-primary max-w-2xl leading-tight">
             Curated for <br/> <span className="italic">every skin.</span>
           </h2>
-          <div className="flex flex-col items-center md:items-end gap-4 w-full md:w-auto">
+          <div className="flex flex-col items-center md:items-end gap-3 md:gap-4 w-full md:w-auto">
             <SkinConcernStickyNote />
-            <p className="font-sans text-sm uppercase tracking-widest text-primary/60">
+            <p className="font-sans text-xs sm:text-sm uppercase tracking-widest text-primary/60">
               01 — The Lookbook
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function CategoryShowcase() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Link href="/shop?gender=female" className="group block relative w-full aspect-[2/3] bg-[#E8D4C0] rounded-[40px] overflow-hidden mb-8">
+            <Link href="/shop?gender=female" className="group block relative w-full aspect-[2/3] bg-[#E8D4C0] rounded-2xl sm:rounded-3xl md:rounded-[40px] overflow-hidden mb-5 md:mb-8 shadow-md">
               <img 
                 src="/images/assets/asset_6.webp" 
                 alt="Women's Skincare" 
@@ -41,11 +41,11 @@ export default function CategoryShowcase() {
               />
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
-            <h3 className="font-heading text-4xl text-primary mb-3">Women's Skincare</h3>
-            <p className="font-sans text-foreground/70 mb-4 max-w-md">
+            <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary mb-2 md:mb-3">Women's Skincare</h3>
+            <p className="font-sans text-xs sm:text-base text-foreground/70 mb-4 max-w-md leading-relaxed">
               Delicate, balancing formulas designed to nurture and protect your natural barrier.
             </p>
-            <Link href="/shop?gender=female" className="font-sans text-sm uppercase tracking-widest text-primary hover:underline underline-offset-4">
+            <Link href="/shop?gender=female" className="font-sans text-xs sm:text-sm uppercase tracking-widest text-primary hover:underline underline-offset-4">
               Shop Women's
             </Link>
           </motion.div>
@@ -58,7 +58,7 @@ export default function CategoryShowcase() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <Link href="/shop?gender=male" className="group block relative w-full aspect-[4/5] bg-[#F2F2F2] rounded-[30px] overflow-hidden mb-8">
+            <Link href="/shop?gender=male" className="group block relative w-full aspect-[4/5] bg-[#F2F2F2] rounded-2xl sm:rounded-3xl md:rounded-[30px] overflow-hidden mb-5 md:mb-8 shadow-md">
               <img 
                 src="/images/assets/asset_16.webp" 
                 alt="Men's Skincare" 
@@ -66,11 +66,11 @@ export default function CategoryShowcase() {
               />
               <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
-            <h3 className="font-heading text-3xl text-primary mb-3">Men's Skincare</h3>
-            <p className="font-sans text-foreground/70 mb-4 max-w-sm">
+            <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-primary mb-2 md:mb-3">Men's Skincare</h3>
+            <p className="font-sans text-xs sm:text-base text-foreground/70 mb-4 max-w-sm leading-relaxed">
               Grounded, deeply purifying essentials built for resilience and effortless routines.
             </p>
-            <Link href="/shop?gender=male" className="font-sans text-sm uppercase tracking-widest text-primary hover:underline underline-offset-4">
+            <Link href="/shop?gender=male" className="font-sans text-xs sm:text-sm uppercase tracking-widest text-primary hover:underline underline-offset-4">
               Shop Men's
             </Link>
           </motion.div>

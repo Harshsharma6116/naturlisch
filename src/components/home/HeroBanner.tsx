@@ -9,41 +9,41 @@ export default function HeroBanner() {
     <section className="relative min-h-[90vh] bg-background flex flex-col lg:flex-row overflow-hidden border-b border-border">
       
       {/* Left Content (Text) */}
-      <div className="flex-1 flex flex-col justify-center px-8 py-20 lg:px-24 lg:py-0 relative z-10">
+      <div className="flex-1 flex flex-col justify-center px-6 py-12 sm:px-8 sm:py-20 lg:px-24 lg:py-0 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="font-sans text-base font-bold tracking-[0.3em] text-leafy-green uppercase mb-8 block">
+          <span className="font-sans text-xs sm:text-base font-bold tracking-[0.25em] sm:tracking-[0.3em] text-leafy-green uppercase mb-4 sm:mb-8 block">
             The Essence of Nature
           </span>
           
-          <h1 className="font-heading text-6xl lg:text-[7rem] leading-[0.85] text-wavy-brown mb-8 tracking-tight">
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-[7rem] leading-[0.9] sm:leading-[0.85] text-wavy-brown mb-6 sm:mb-8 tracking-tight">
             Real <br />
-            <span className="italic text-wavy-brown font-light ml-8 lg:ml-16">Beauty.</span>
+            <span className="italic text-wavy-brown font-light ml-4 sm:ml-8 lg:ml-16">Beauty.</span>
           </h1>
           
-          <p className="font-sans text-lg text-foreground/80 max-w-md leading-relaxed mb-12">
+          <p className="font-sans text-sm sm:text-lg text-foreground/80 max-w-md leading-relaxed mb-8 sm:mb-12">
             Authentic personal care crafted from the earth. Discover formulations designed for grounded elegance and natural radiance.
           </p>
           
           <Link 
             href="/shop" 
-            className="group flex items-center gap-6 font-sans text-sm uppercase tracking-widest text-primary hover:text-[#3A2A0F] transition-colors w-fit"
+            className="group flex items-center gap-4 sm:gap-6 font-sans text-xs sm:text-sm uppercase tracking-widest text-primary hover:text-[#3A2A0F] transition-colors w-fit"
           >
             <span className="border-b border-primary pb-1 group-hover:border-[#3A2A0F] transition-colors">
               Explore Collection
             </span>
-            <div className="w-12 h-12 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </motion.div>
       </div>
 
       {/* Right Content (Hero Image Fitted Frame) */}
-      <div className="flex-1 relative min-h-[50vh] lg:min-h-full bg-[#E8D4C0]/20 flex items-center justify-center p-8 lg:p-16">
+      <div className="flex-1 relative min-h-[40vh] sm:min-h-[50vh] lg:min-h-full bg-[#E8D4C0]/20 flex items-center justify-center p-4 sm:p-8 lg:p-16">
         
         <motion.div
           className="relative w-full max-w-[650px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5"
