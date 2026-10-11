@@ -17,7 +17,7 @@ export default function FeaturedProducts() {
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b border-border pb-8">
           <div>
-            <span className="font-sans text-sm uppercase tracking-widest text-primary/60 mb-4 block">02 — The Collection</span>
+            <span className="font-sans text-sm uppercase tracking-widest text-primary/60 mb-4 block">03 — The Collection</span>
             <h2 className="font-heading text-4xl md:text-5xl text-primary">Signature Formulations</h2>
           </div>
           <Link href="/shop" className="group hidden md:flex items-center gap-4 mt-6 md:mt-0 font-sans text-sm uppercase tracking-widest text-primary">

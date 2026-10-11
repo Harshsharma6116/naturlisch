@@ -22,7 +22,7 @@ export default function BrandStory() {
           transition={{ duration: 1 }}
           className="font-sans text-xs uppercase tracking-[0.4em] text-[#F1DDC4]/60 mb-12 block"
         >
-          03 — Our Philosophy
+          04 — Our Philosophy
         </motion.span>
 
         <motion.h2 
