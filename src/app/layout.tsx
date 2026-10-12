@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   description: "Authentic personal care and a genuine approach to aesthetics with natural products.",
   icons: {
     icon: [
-      { url: "/icon.svg?v=4", type: "image/svg+xml" },
-      { url: "/favicon.ico?v=4", sizes: "any" },
-      { url: "/icon.png?v=4", type: "image/png", sizes: "512x512" },
+      { url: "/icon.svg?v=5", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=5", sizes: "any" },
+      { url: "/icon.png?v=5", type: "image/png", sizes: "512x512" },
     ],
     apple: [
-      { url: "/apple-icon.png?v=4", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=5", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=4",
+    shortcut: "/favicon.ico?v=5",
   },
   manifest: "/manifest.json",
 };
